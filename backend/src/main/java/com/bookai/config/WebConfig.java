@@ -8,13 +8,21 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${app.cors.allowed-origin}")
+    @Value("${app.cors.allowed-origin:http://localhost:5173}")
     private String allowedOrigin;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        String[] allowedOrigins = {
+                allowedOrigin,
+                "http://localhost:*",
+                "http://127.0.0.1:*",
+                "https://*.netlify.app",
+                "https://*.vercel.app"
+        };
+
         registry.addMapping("/api/**")
-                .allowedOriginPatterns("https://*.netlify.app", "http://localhost:*")
+                .allowedOriginPatterns(allowedOrigins)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);

@@ -149,3 +149,142 @@ button:disabled {
   padding-top: 0.6rem;
   margin-top: auto;
 }
+
+/* ---- Tabs ---- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: white;
+  color: #5a5237;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  background: #ece7da;
+}
+
+.tab-btn-active {
+  background: #3d3a2f;
+  color: white;
+  border-color: #3d3a2f;
+}
+
+/* ---- Upload panel ---- */
+.upload-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #6b6b6b;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dropzone:hover {
+  border-color: #3d3a2f;
+  background: #faf9f5;
+}
+
+.dropzone-has-file {
+  border-color: #3d3a2f;
+  border-style: solid;
+  color: #2b2b2b;
+}
+
+.muted {
+  color: #6b6b6b;
+}
+
+.small-note {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.upload-result {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.secondary-btn {
+  background: white;
+  color: #3d3a2f;
+  border: 1px solid #3d3a2f;
+  margin-top: 0.75rem;
+}
+
+/* ---- Ask panel ---- */
+.ask-panel {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ask-form {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.ask-history {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ask-history-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.ask-q {
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.ask-a {
+  margin: 0;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+}
