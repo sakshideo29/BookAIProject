@@ -70,11 +70,27 @@ Requires Node.js 18+.
 ```bash
 cd frontend
 npm install
+# Start dev server (default: http://localhost:5173)
 npm run dev
 ```
 
-Runs on `http://localhost:5173` and calls the backend at `http://localhost:8080`.
+By default the frontend targets the local backend at `http://localhost:8080/api`.
+To point the frontend at a different backend (deployed or preview), set VITE_API_URL.
 
+# Examples
+# Run dev with a deployed backend URL:
+# VITE_API_URL="https://bookaiproject.onrender.com/api" npm run dev
+
+# Or create a .env file in frontend/ with:
+# VITE_API_URL=https://bookaiproject.onrender.com/api
+
+Local dev notes:
+- Backend must be running for API features. Start it with:
+  cd backend && ./mvnw spring-boot:run
+- The backend now starts even if GEMINI_API_KEY is not set; however any AI/Gemini-powered endpoints will fail until GEMINI_API_KEY is configured.
+- CORS is configured to allow the Vite dev origin (http://localhost:5173) and common preview hosts.
+
+The frontend dev server runs at `http://localhost:5173` by default.
 ## Notes / things you said you'll handle yourself
 
 - **Caching** of repeated genre/mood queries — not implemented yet, add at the
