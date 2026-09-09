@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { API_ROOT } from './config.js'
 
-const API_BASE_URL = `${API_ROOT}/api/books`
+const API_BASE_URL = `${API_ROOT}/books`
 
 export async function getRecommendations({ genre, author, mood, count, minutesPerDay }) {
   const response = await axios.post(`${API_BASE_URL}/recommend`, {
