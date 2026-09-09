@@ -6,7 +6,7 @@ finish reading, calculated from your own reading speed.
 
 - **Frontend:** React (Vite) + Axios
 - **Backend:** Java 21, Spring Boot 3, WebClient, Gemini API
-- **AI:** Google Gemini (`gemini-2.0-flash`)
+- **AI:** Google Gemini (`gemini-3.6-flash`)
 
 ## Project structure
 
