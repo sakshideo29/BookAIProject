@@ -22,7 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
                 "https://*.onrender.com"
         };
 
-        registry.addMapping("/api/**")
+        registry.addMapping("/**")
                 .allowedOriginPatterns(allowedOrigins)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
