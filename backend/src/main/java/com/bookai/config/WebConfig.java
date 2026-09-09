@@ -13,17 +13,23 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        String[] allowedOrigins = {
-                allowedOrigin,
-                "http://localhost:*",
-                "http://127.0.0.1:*",
-                "https://*.netlify.app",
-                "https://*.vercel.app"
-        };
 
         registry.addMapping("/api/**")
-                .allowedOriginPatterns(allowedOrigins)
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedOriginPatterns(
+                        allowedOrigin,
+                        "http://localhost:5173",
+                        "http://localhost:3000",
+                        "http://127.0.0.1:5173",
+                        "https://*.netlify.app",
+                        "https://*.vercel.app"
+                )
+                .allowedMethods(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "OPTIONS"
+                )
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
