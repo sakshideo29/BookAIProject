@@ -76,6 +76,7 @@ npm run dev
 
 By default the frontend targets the local backend at `http://localhost:8080/api`.
 To point the frontend at a different backend (deployed or preview), set VITE_API_URL.
+The backend accepts both `/api/docs/ingest-pdf` and the compatibility alias `/docs/ingest-pdf`.
 
 # Examples
 # Run dev with a deployed backend URL:

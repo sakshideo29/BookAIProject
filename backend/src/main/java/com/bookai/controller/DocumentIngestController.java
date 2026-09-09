@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/docs")
+@RequestMapping({"/api/docs", "/docs"})
 @RequiredArgsConstructor
 public class DocumentIngestController {
 
